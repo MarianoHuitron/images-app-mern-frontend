@@ -46,7 +46,7 @@ export const imageReducer = (state = initState, action) => {
             }
         
         case types.imageFilter:
-            const value = action.payload;
+            const value = action.payload.toLowerCase();
             const filtered = state.images.filter((val) => val.title.toLowerCase().includes(value));
             return {
                 ...state,
